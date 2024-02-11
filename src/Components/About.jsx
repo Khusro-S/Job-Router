@@ -3,7 +3,7 @@ export default function About() {
   // const navigate = useNavigate();
   return (
     <>
-      <h1 className="about">About us</h1>
+      <h2 className="about">About us</h2>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores in
         soluta est qui? Quaerat assumenda, exercitationem debitis molestias

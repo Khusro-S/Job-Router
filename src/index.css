@@ -5,7 +5,7 @@
 
 @layer components {
   * {
-    @apply text-white m-0;
+    @apply text-white m-0 box-border;
   }
   body {
     @apply m-0 p-5 font-['Poppins'] bg-primary;
@@ -14,7 +14,7 @@
     @apply border-none p-2 rounded text-white bg-secondary cursor-pointer;
   }
   nav {
-    @apply flex gap-10 justify-end max-w-6xl my-0 mx-auto;
+    @apply flex gap-6 justify-end max-w-6xl my-0 mx-auto;
   }
   nav h1 {
     @apply mr-auto border-b-4 border-solid border-secondary text-2xl;
@@ -24,5 +24,35 @@
   }
   main {
     @apply max-w-6xl my-10 mx-auto;
+  }
+  h2{
+    @apply text-xl font-bold
+  }
+  p{
+    @apply my-3
+  }
+  .help-layout nav {
+    @apply flex justify-center gap-8 my-8 mx-0
+  }
+  .help-layout nav a {
+    @apply p-3 border-2 border-solid border-secondary no-underline
+  }
+  .help-layout nav a:hover {
+    @apply border-white
+  }
+  .faq .question {
+    @apply bg-[#cba8e1] py-1 px-5 rounded-sm my-5 mx-0
+  }
+  form {
+    @apply mt-7
+  }
+  form input, form label span, form textarea {
+    @apply block
+  }
+  form input, form textarea {
+    @apply mb-7 p-2 rounded-[4px] border-0 w-80 text-secondary
+  }
+  form label span {
+    @apply mb-[10px]
   }
 }

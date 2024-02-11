@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import classNames from "classnames";
-export default function Navbar() {
+
+export default function HistoryNavbar() {
   const navLinkStyles = ({ isActive }) => {
     return classNames({
       "font-bold": isActive,
@@ -10,13 +11,12 @@ export default function Navbar() {
     });
   };
   return (
-    <nav className="">
-      <h1>jobRouter</h1>
-      <NavLink className={navLinkStyles} to="/">
-        Home
+    <nav>
+      <NavLink className={navLinkStyles} to="faq">
+        View the FAQs
       </NavLink>
-      <NavLink className={navLinkStyles} to="/about">
-        About
+      <NavLink className={navLinkStyles} to="contact">
+        Contact Us
       </NavLink>
     </nav>
   );
