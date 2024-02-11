@@ -41,7 +41,7 @@
     @apply border-white
   }
   .faq .question {
-    @apply bg-background py-1 px-5 rounded-sm my-5 mx-0
+    @apply bg-background bg-opacity-80 py-2 px-4 rounded-sm my-5 mx-0
   }
   form {
     @apply mt-7
@@ -56,7 +56,7 @@
     @apply mb-[10px]
   }
   .careers > a{
-    @apply block bg-background p-2 rounded my-5 mx-0
+    @apply block bg-background bg-opacity-80 py-2 px-4 rounded my-5 mx-0
   }
   .careers > a:hover > p {
     @apply text-primary
@@ -66,5 +66,8 @@
   }
   .careers > a p:last-child{
     @apply text-sm text-[#eee]
+  }
+  .career-details {
+    @apply bg-background bg-opacity-80 py-2 px-4 rounded my-5
   }
 }
