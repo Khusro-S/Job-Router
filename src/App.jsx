@@ -11,7 +11,7 @@ import Home from "./Components/Home";
 import About from "./Components/About";
 import Faq from "./Components/Help/Faq";
 import Contact from "./Components/Help/Contact";
-import Careers from "./Components/Careers";
+import Careers, { careersLoader } from "./Components/Careers";
 import NotFound from "./Components/NotFound";
 
 // layouts
@@ -31,7 +31,7 @@ const router = createBrowserRouter(
       </Route>
 
       <Route path="careers" element={<CareersLayout />}>
-        <Route index element={<Careers />} />
+        <Route loader={careersLoader} index element={<Careers />} />
       </Route>
 
       {/* to catch unknown routes and show something other than the default */}

@@ -41,7 +41,7 @@
     @apply border-white
   }
   .faq .question {
-    @apply bg-[#cba8e1] py-1 px-5 rounded-sm my-5 mx-0
+    @apply bg-background py-1 px-5 rounded-sm my-5 mx-0
   }
   form {
     @apply mt-7
@@ -54,5 +54,17 @@
   }
   form label span {
     @apply mb-[10px]
+  }
+  .careers > a{
+    @apply block bg-background p-2 rounded my-5 mx-0
+  }
+  .careers > a:hover > p {
+    @apply text-primary
+  }
+  .careers p{
+    @apply m-0
+  }
+  .careers > a p:last-child{
+    @apply text-sm text-[#eee]
   }
 }

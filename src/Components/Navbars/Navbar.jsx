@@ -21,6 +21,9 @@ export default function Navbar() {
       <NavLink className={navLinkStyles} to="/help">
         Help
       </NavLink>
+      <NavLink className={navLinkStyles} to="/careers">
+        Careers
+      </NavLink>
     </nav>
   );
 }
