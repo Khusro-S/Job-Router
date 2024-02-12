@@ -10,9 +10,10 @@ import {
 import Home from "./Components/Home";
 import About from "./Components/About";
 import Faq from "./Components/Help/Faq";
-import Contact from "./Components/Help/Contact";
+import Contact, { contactAction } from "./Components/Help/Contact";
 import NotFound from "./Components/NotFound";
 import CareerError from "./Components/Careers/CareerError";
+import Thankyou from "./Components/Help/Thankyou";
 
 // loaders
 import Careers, { careersLoader } from "./Components/Careers/Careers";
@@ -33,8 +34,13 @@ const router = createBrowserRouter(
 
       <Route path="help" element={<HelpLayout />}>
         <Route path="faq" element={<Faq />} />
-        <Route path="contact" element={<Contact />} />
+        <Route
+          path="contact"
+          element={<Contact />}
+          action={contactAction}
+        ></Route>
       </Route>
+      <Route path="thankyou" element={<Thankyou />} />
 
       <Route
         path="careers"
