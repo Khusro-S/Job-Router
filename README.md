@@ -10,7 +10,7 @@ A very basic job lisitng site. I made this while learning routing in React using
 
 ## 🎥 Demo/Preview
 
-<img src="https://github.com/Khusro-S/React-Router-Demo-New/blob/main/src/assets/JobRouterDemo.mp4" width="100%"/>
+<img src="[https://github.com/Khusro-S/React-Router-Demo-New/blob/main/src/assets/JobRouterDemo.mp4](https://github.com/Khusro-S/React-Router-Demo-New/assets/149171453/dd9e4a15-7eee-4bee-af59-7bfc28fbe001)" width="100%"/>
 
 ## 🚦 Running the Project
 
