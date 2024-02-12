@@ -76,4 +76,16 @@
   .career-details {
     @apply cardBg py-2 px-4 rounded my-5
   }
+  .breadcrumbs{
+    @apply max-w-6xl my-5 mx-auto
+  }
+  .breadcrumbs > *{
+    @apply inline-block mr-2
+  }
+  .breadcrumbs .crumb{
+    @apply after:content-['>'] after:ml-2 last:after:hidden
+  }
+  .breadcrumbs .crumb a{
+    @apply text-[#ddd] underline hover:text-secondary
+  }
 }
