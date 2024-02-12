@@ -11,11 +11,14 @@ import Home from "./Components/Home";
 import About from "./Components/About";
 import Faq from "./Components/Help/Faq";
 import Contact from "./Components/Help/Contact";
+import NotFound from "./Components/NotFound";
+import CareerError from "./Components/Careers/CareerError";
+
+// loaders
 import Careers, { careersLoader } from "./Components/Careers/Careers";
 import CareerDetails, {
   careerDetailsLoader,
 } from "./Components/Careers/CareerDetails";
-import NotFound from "./Components/NotFound";
 
 // layouts
 import RootLayout from "./layouts/RootLayout";
@@ -33,7 +36,11 @@ const router = createBrowserRouter(
         <Route path="contact" element={<Contact />} />
       </Route>
 
-      <Route path="careers" element={<CareersLayout />}>
+      <Route
+        path="careers"
+        element={<CareersLayout />}
+        errorElement={<CareerError />}
+      >
         <Route loader={careersLoader} index element={<Careers />} />
         <Route
           loader={careerDetailsLoader}

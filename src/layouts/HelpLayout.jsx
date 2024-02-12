@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-import HistoryNavbar from "../Components/Navbars/HelpNavbar";
+import HelpNavbar from "../Components/Navbars/HelpNavbar";
 
 export default function HelpLayout() {
   return (
@@ -11,7 +11,7 @@ export default function HelpLayout() {
         nemo quisquam debitis amet laboriosam laborum, distinctio soluta placeat
         sapiente.
       </p>
-      <HistoryNavbar />
+      <HelpNavbar />
       <Outlet />
     </div>
   );
