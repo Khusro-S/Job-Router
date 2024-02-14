@@ -10,16 +10,18 @@ import {
 import Home from "./Components/Home";
 import About from "./Components/About";
 import Faq from "./Components/Help/Faq";
+import FaqError from "./Components/Help/FaqError";
 import Contact, { contactAction } from "./Components/Help/Contact";
 import NotFound from "./Components/NotFound";
 import CareerError from "./Components/Careers/CareerError";
 import Thankyou from "./Components/Help/Thankyou";
+import Careers from "./Components/Careers/Careers";
+import CareerDetails from "./Components/Careers/CareerDetails";
 
 // loaders
-import Careers, { careersLoader } from "./Components/Careers/Careers";
-import CareerDetails, {
-  careerDetailsLoader,
-} from "./Components/Careers/CareerDetails";
+import { careersLoader } from "./Components/Careers/Careers";
+import { careerDetailsLoader } from "./Components/Careers/CareerDetails";
+import { faqLoader } from "./Components/Help/Faq";
 
 // layouts
 import RootLayout from "./layouts/RootLayout";
@@ -33,7 +35,12 @@ const router = createBrowserRouter(
       <Route path="about" element={<About />} />
 
       <Route path="help" element={<HelpLayout />}>
-        <Route path="faq" element={<Faq />} />
+        <Route
+          path="faq"
+          loader={faqLoader}
+          element={<Faq />}
+          errorElement={<FaqError />}
+        />
         <Route
           path="contact"
           element={<Contact />}

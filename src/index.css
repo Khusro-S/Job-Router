@@ -14,7 +14,7 @@
     @apply border-none p-2 rounded text-white bg-secondary cursor-pointer;
   }
   nav {
-    @apply flex gap-6 justify-end max-w-6xl my-0 mx-auto;
+    @apply flex gap-6 justify-end max-w-6xl my-0 mx-auto max-sm:gap-1 max-sm:text-sm;
   }
   nav h1 {
     @apply mr-auto border-b-4 border-solid border-secondary text-2xl;

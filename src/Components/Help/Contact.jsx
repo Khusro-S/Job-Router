@@ -1,4 +1,4 @@
-import { Form, redirect, useActionData, useNavigate } from "react-router-dom";
+import { Form, redirect, useActionData } from "react-router-dom";
 
 export default function Contact() {
   const data = useActionData();
