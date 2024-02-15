@@ -29,8 +29,8 @@ export default function FaqAccordion() {
       {faq.map((faq, index) => (
         <div
           key={faq.id}
-          // className={`question ${selected === index ? "open" : ""}`}
-          className="question"
+          className={`question ${selected === index ? "open" : ""}`}
+          // className="question"
         >
           <p
             onClick={() => handleToggle(index)}
@@ -39,12 +39,13 @@ export default function FaqAccordion() {
             <strong>{faq.question}</strong>{" "}
             {width <= "640" ? (selected === index ? "-" : "+") : null}
           </p>
-
-          {width >= "640" ? (
-            <p>{faq.answer}</p>
-          ) : (
-            selected === index && <p>{faq.answer}</p>
-          )}
+          <div className="answer">
+            {width >= "640" ? (
+              <p>{faq.answer}</p>
+            ) : (
+              selected === index && <p>{faq.answer}</p>
+            )}
+          </div>
         </div>
       ))}
     </div>

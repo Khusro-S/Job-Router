@@ -47,7 +47,15 @@
     @apply bg-background bg-opacity-80
   }
   .faq .question {
-    @apply cardBg py-2 px-4 rounded-sm my-5 mx-0
+    @apply cardBg py-2 px-4 rounded-sm my-5 mx-0 overflow-hidden
+  }
+  .faq .question .answer {
+    @apply  -translate-x-full transition-all duration-300 ease-in max-h-0  overflow-hidden
+  }
+  .faq .question.open .answer {
+    @apply   translate-x-0 max-h-[50rem]
+    /* @apply block */
+    
   }
   form {
     @apply mt-7
