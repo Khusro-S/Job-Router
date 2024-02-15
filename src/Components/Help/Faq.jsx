@@ -36,16 +36,17 @@ export default function FaqAccordion() {
             onClick={() => handleToggle(index)}
             className="cursor-pointer flex justify-between"
           >
-            <strong>{faq.question}</strong>{" "}
+            <strong>{faq.question}</strong>
             {width <= "640" ? (selected === index ? "-" : "+") : null}
           </p>
-          <div className="answer">
-            {width >= "640" ? (
-              <p>{faq.answer}</p>
-            ) : (
-              selected === index && <p>{faq.answer}</p>
-            )}
-          </div>
+
+          {width >= "640" ? (
+            <p>{faq.answer}</p>
+          ) : (
+            <div className="answer">
+              <p>{faq.answer}</p>{" "}
+            </div>
+          )}
         </div>
       ))}
     </div>
