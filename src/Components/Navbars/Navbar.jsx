@@ -6,7 +6,7 @@ export default function Navbar() {
       "font-bold": isActive,
       "font-normal": !isActive,
       underline: isActive,
-      "bg-secondary": isActive,
+      "dark:bg-secondary bg-primary": isActive,
     });
   };
   return (

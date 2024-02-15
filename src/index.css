@@ -7,23 +7,23 @@
   * {
     @apply text-white m-0 box-border;
   }
-  body {
-    @apply m-0 p-5 font-['Poppins'] bg-primary;
+  .root-layout {
+    @apply m-0 p-5 font-['Poppins']  dark:bg-primary bg-secondary min-h-screen;
   }
   button {
-    @apply border-none p-2 rounded text-white bg-secondary cursor-pointer;
+    @apply border-none p-2 rounded text-white dark:bg-secondary bg-primary cursor-pointer;
   }
   nav {
     @apply flex gap-6 justify-end max-w-6xl my-0 mx-auto max-sm:gap-1 max-sm:text-sm;
   }
   nav h1 {
-    @apply mr-auto border-b-4 border-solid border-secondary text-2xl;
+    @apply mr-auto border-b-4 border-solid dark:border-secondary border-primary text-2xl;
   }
   nav a {
     @apply px-[6px] py-1 rounded-xl place-self-center;
   }
   nav a:hover{
-    @apply border-2 border-secondary border-solid 
+    @apply  underline
   }
   main {
     @apply max-w-6xl my-10 mx-auto;
@@ -38,13 +38,13 @@
     @apply flex justify-center gap-8 my-8 mx-0
   }
   .help-layout nav a {
-    @apply p-3 border-2 border-solid border-secondary no-underline
+    @apply p-3 border-2 border-solid dark:border-secondary border-primary no-underline
   }
   .help-layout nav a:hover {
-    @apply border-white
+    @apply border-white  
   }
   .cardBg {
-    @apply bg-background bg-opacity-80
+    @apply dark:bg-background bg-primary bg-opacity-20 dark:bg-opacity-80
   }
   .faq .question {
     @apply cardBg py-2 px-4 rounded-sm my-5 mx-0 overflow-hidden
@@ -96,4 +96,5 @@
   .breadcrumbs .crumb a{
     @apply text-[#ddd] underline hover:text-secondary
   }
+
 }
