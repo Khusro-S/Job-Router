@@ -1,7 +1,18 @@
 import { Link, useLocation } from "react-router-dom";
+import { useState } from "react";
 
 export default function Breadcrumbs({ mode }) {
   const location = useLocation();
+  const storedIsChecked = localStorage.getItem("isChecked");
+  const [isChecked, setIsChecked] = useState(storedIsChecked === "true");
+
+  const handleToggle = () => {
+    const newIsChecked = !isChecked;
+    setIsChecked(newIsChecked);
+
+    localStorage.setItem("isChecked", newIsChecked.toString());
+  };
+
   let currentLink = "";
   const crumbs = location.pathname
     .split("/")
@@ -24,6 +35,8 @@ export default function Breadcrumbs({ mode }) {
           name="mode"
           type="checkbox"
           className="mode opacity-0 peer"
+          checked={isChecked}
+          onChange={handleToggle}
         />
         <label
           htmlFor="mode"
